@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI AMAR | Intelligent Workspace</title>
+    <!-- New Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/WWhngKKw/8b512605-7edb-4b1f-9f30-6e62396231f1.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Tajawal', 'sans-serif'], // Main font for Arabic
+              display: ['Outfit', 'sans-serif'], // For English Headings
+            },
+            colors: {
+              // Modern Palette Definition
+              primary: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6', // Bright Blue (Light Mode Main)
+                600: '#2563eb',
+                700: '#1d4ed8', // Deep Blue (Dark Mode Main)
+                800: '#1e40af',
+                900: '#1e3a8a',
+              },
+              accent: {
+                light: '#f97316', // Orange (Warmth for Light mode)
+                dark: '#22d3ee',  // Cyan (Neon for Dark mode)
+                500: '#06b6d4',
+              },
+              dark: {
+                950: '#020617', // Very dark slate/navy (Not pure black)
+                900: '#0f172a',
+                800: '#1e293b',
+                700: '#334155',
+              },
+              light: {
+                50: '#f8fafc', // Soft White
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'slide-in': 'slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'bounce-gentle': 'bounceGentle 2s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideIn: {
+                '0%': { transform: 'translateX(20px) scale(0.95)', opacity: '0' },
+                '100%': { transform: 'translateX(0) scale(1)', opacity: '1' },
+              },
+              bounceGentle: {
+                 '0%, 100%': { transform: 'translateY(-5%)', animationTimingFunction: 'cubic-bezier(0.8,0,1,1)' },
+                 '50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0,0,0.2,1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Tajawal', sans-serif;
+        /* Default transition for smooth theme switching */
+        transition: background-color 0.5s ease, color 0.5s ease;
+        overflow: hidden; 
+      }
+      
+      /* Typography Improvements */
+      p {
+        line-height: 1.8; /* Better readability */
+        margin-bottom: 0.75rem;
+      }
+      
+      strong {
+        font-weight: 800;
+        color: inherit;
+      }
+
+      /* Markdown List Styling */
+      ul { list-style-type: disc; padding-right: 1.5rem; margin-bottom: 1rem; }
+      ol { list-style-type: decimal; padding-right: 1.5rem; margin-bottom: 1rem; }
+      li { margin-bottom: 0.5rem; }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+      .dark ::-webkit-scrollbar-thumb { background: #334155; }
+      ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
